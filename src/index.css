@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+    --primary: 200 80% 24%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 215 12% 50%;
+    --accent: 200 60% 94%;
+    --accent-foreground: 200 80% 24%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 200 80% 24%;
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --critical: 0 72% 51%;
+    --critical-foreground: 0 0% 100%;
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    --caution: 45 93% 47%;
+    --caution-foreground: 0 0% 10%;
+    --info: 210 100% 50%;
+    --info-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --teal: 174 60% 40%;
+    --navy: 215 50% 15%;
+    --navy-light: 215 40% 25%;
+
+    --sidebar-background: 215 50% 12%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 174 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 40% 20%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 215 30% 22%;
+    --sidebar-ring: 174 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* React Flow custom styles */
+.react-flow__node {
+  font-family: 'Inter', sans-serif;
+}
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.3); border-radius: 3px; }
+
+/* Priority badges */
+.priority-critical { @apply bg-destructive text-destructive-foreground; }
+.priority-high { background: hsl(var(--warning)); color: hsl(var(--warning-foreground)); }
+.priority-medium { background: hsl(var(--caution)); color: hsl(var(--caution-foreground)); }
+.priority-low { background: hsl(var(--info)); color: hsl(var(--info-foreground)); }
+
+/* Pulse animation for live indicators */
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse-live { animation: pulse-live 2s ease-in-out infinite; }
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-in { animation: slide-in-right 0.3s ease-out; }

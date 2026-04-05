@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DP World AI Control Tower favicon">
+  <defs>
+    <linearGradient id="bg" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2136" />
+      <stop offset="1" stop-color="#07111B" />
+    </linearGradient>
+    <linearGradient id="route" x1="18" y1="20" x2="48" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7CE6F1" />
+      <stop offset="1" stop-color="#F5B342" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#bg)" />
+  <rect x="2" y="2" width="60" height="60" rx="18" stroke="white" stroke-opacity="0.06" />
+  <circle cx="32" cy="32" r="18" stroke="white" stroke-opacity="0.08" stroke-width="1.5" />
+  <path d="M18 40C24 28 34 22 46 22" stroke="url(#route)" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M18 24H42" stroke="#7CE6F1" stroke-width="4.5" stroke-linecap="round" />
+  <circle cx="18" cy="24" r="4.5" fill="#7CE6F1" />
+  <circle cx="46" cy="22" r="4.5" fill="#F5B342" />
+  <circle cx="32" cy="32" r="5" fill="#FFFFFF" fill-opacity="0.92" />
+  <path d="M27 38H37V43C37 45.7614 34.7614 48 32 48C29.2386 48 27 45.7614 27 43V38Z" fill="#FFFFFF" fill-opacity="0.78" />
+</svg>

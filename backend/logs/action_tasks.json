@@ -1,0 +1,65 @@
+[
+  {
+    "id": "TASK-001",
+    "title": "Book alternate carrier option",
+    "assignee": "Ops Manager",
+    "dueTime": "10:30",
+    "status": "completed",
+    "relatedShipment": "SHP-001",
+    "priority": "critical",
+    "actionId": "AUTO-001",
+    "updatedAt": "2026-04-04T02:40:46Z"
+  },
+  {
+    "id": "TASK-002",
+    "title": "Escalate customs hold to broker",
+    "assignee": "Terminal Planner",
+    "dueTime": "11:00",
+    "status": "completed",
+    "relatedShipment": "SHP-002",
+    "priority": "critical",
+    "actionId": "AUTO-002",
+    "updatedAt": "2026-04-04T02:40:50Z"
+  },
+  {
+    "id": "TASK-003",
+    "title": "Coordinate terminal slot adjustment",
+    "assignee": "Control Tower Manager",
+    "dueTime": "12:30",
+    "status": "escalated",
+    "relatedShipment": "SHP-003",
+    "priority": "high",
+    "actionId": "AUTO-003",
+    "updatedAt": "2026-04-04T02:40:54Z"
+  },
+  {
+    "id": "TASK-004",
+    "title": "Validate transport handoff times",
+    "assignee": "Ops Manager",
+    "dueTime": "14:00",
+    "status": "in-progress",
+    "relatedShipment": "SHP-004",
+    "priority": "high",
+    "actionId": "AUTO-004"
+  },
+  {
+    "id": "TASK-005",
+    "title": "Prepare customer delay notification",
+    "assignee": "Terminal Planner",
+    "dueTime": "16:00",
+    "status": "pending",
+    "relatedShipment": "SHP-005",
+    "priority": "medium",
+    "actionId": "AUTO-005"
+  },
+  {
+    "id": "TASK-006",
+    "title": "Re-check document readiness",
+    "assignee": "Control Tower Manager",
+    "dueTime": "18:00",
+    "status": "pending",
+    "relatedShipment": "SHP-006",
+    "priority": "medium",
+    "actionId": "AUTO-006"
+  }
+]
