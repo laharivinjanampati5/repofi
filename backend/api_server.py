@@ -12,6 +12,7 @@ from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from audit_logger import build_audit_event, write_audit_event
@@ -50,10 +51,10 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS middleware for frontend development
+# CORS middleware - allow all origins for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "http://localhost:3000", "http://127.0.0.1:8080"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -790,6 +791,18 @@ async def update_task(task_id: str, task_data: Dict[str, Any]):
 
 
 # ============================================================================
+# Static file serving (for frontend)
+# ============================================================================
+
+try:
+    dist_path = Path(__file__).parent.parent / "dist"
+    if dist_path.exists():
+        app.mount("/", StaticFiles(directory=str(dist_path), html=True), name="static")
+except Exception as e:
+    print(f"Warning: Could not mount static files: {e}")
+
+
+# ============================================================================
 # Main
 # ============================================================================
 
@@ -799,6 +812,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "api_server:app",
         host="0.0.0.0",
-        port=5000,
+        port=8000,
         reload=True,
     )

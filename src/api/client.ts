@@ -3,7 +3,7 @@
  * Handles all HTTP communication with the backend API server
  */
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' ? `${window.location.origin}/api` : 'http://localhost:8000/api');
 
 export interface ApiException {
   id: string;
